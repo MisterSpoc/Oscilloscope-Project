@@ -36,7 +36,7 @@ class Device:
         self.oscilloscope = serial.Serial()
         self.data_thread = threading.Thread(target=self.__openDataStream)
         self.lock = threading.Lock()
-        self.oscilloscope.set_buffer_size(rx_size=1048576) # set buffer size to 1 MiB
+        # self.oscilloscope.set_buffer_size(rx_size=1048576) # set buffer size to 1 MiB Windows Only
     
     def __openPort(self):
         """Opens a serial port with set variables
@@ -106,9 +106,8 @@ class Device:
 
             
 if __name__ == '__main__':
-    osc1 = Device(flush=None)
+    osc1 = Device(flush=0.33)
     osc1.port_name = 'COM4'
-    osc1.baud_rate = 9600
     
     osc1.startCollection()
     time.sleep(10)
