@@ -1,5 +1,5 @@
 import numpy as np
-import matplotlibpyplot as plt
+import matplotlib.pyplot as plt
 from scipy.fftpack import fft
 
 def fastfourier(inp):
