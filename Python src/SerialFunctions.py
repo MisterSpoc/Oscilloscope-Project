@@ -16,7 +16,7 @@ class Device:
         Create a new object for every connected oscilloscope.
     """
     
-    def __init__(self, port = '', baud = 57600, time = 2, flush = None):
+    def __init__(self, port = '', baud = 115200, time = 2, flush = None):
         """Creates Device Object
 
         Args:
