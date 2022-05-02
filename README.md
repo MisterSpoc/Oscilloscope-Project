@@ -3,13 +3,15 @@
 
 Oscilloscope project is designed to be an embedded demonstration of python, with hardware assistance from an Arduino Uno.
 
-Goals of project:
+# Goals of project:
  Design an easy to use basic oscilloscope with data manipulation functions and graphing baked into basic functionality
  
-Necessary Libraries for functionality
+# Necessary Libraries for functionality
 
-Pyserial
+# Pyserial
+
   Use: Data ingress pipeline, arduino to Python
+		
   Relevant webpage:
   
   https://pyserial.readthedocs.io/en/latest/pyserial.html
@@ -18,8 +20,10 @@ Pyserial
   
   python -m pip install pyserial
   
-Numpy
+# Numpy
+
   Use: Data processing, manipulation
+		
   Relevant webpage:
   
   https://numpy.org/doc/stable/
@@ -28,8 +32,10 @@ Numpy
   
   pip install numpy
   
-Scipy
+# Scipy
+
   Use: Data processing, manipulation. Included packages for Fast Fourier Transform (FFT).
+		
   Relevant webpage:
   
   https://scipy.org/
@@ -38,8 +44,10 @@ Scipy
   
   pip install scipy
   
-Pandas
+# Pandas
+
   Use: Data analysis and manipulation, relevant in CSV processing in this program
+		
   Relevant webpage:
   
   https://pandas.pydata.org/
@@ -48,8 +56,10 @@ Pandas
   
   pip install pandas
   
-Matplotlib:
+# Matplotlib:
+
   Use: Data Visualization, graphing
+		
   Relevant webpage:
   
   https://matplotlib.org/
@@ -58,8 +68,10 @@ Matplotlib:
   
   pip install matplotlib
   
-PySimpleGUI]
+# PySimpleGUI]
+
   Use: User interface for oscilloscope
+		
   Relevant webpage:
   
   https://pysimplegui.readthedocs.io/en/latest/#pysimplegui-users-manual
