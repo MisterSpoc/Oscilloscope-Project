@@ -2,6 +2,8 @@ import os
 import pandas as pd
 
 def makeCSV(oscilloscope, name=None):
+    # converts data in temp files to csv using pandas
+    # follow conventions in output_example.txt for proper usage
     first = True
     headers = []
     data = []
@@ -38,6 +40,7 @@ def makeCSV(oscilloscope, name=None):
                         
     
 def deleteTempFiles():
+    # deletes all temp files associated with oscilloscope
     for item in os.listdir():
         if item.endswith(".temp"):
             os.remove(item)
