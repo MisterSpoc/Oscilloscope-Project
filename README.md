@@ -68,7 +68,7 @@ Oscilloscope project is designed to be an embedded demonstration of python, with
   
   pip install matplotlib
   
-# PySimpleGUI]
+# PySimpleGUI
 
   Use: User interface for oscilloscope
 		
