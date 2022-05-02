@@ -30,6 +30,7 @@ class Device:
         self.baud_rate = baud
         self.timeout = time
         self.end = False
+        self.collecting = False
         self.data_buffer = []
         self.buffer_flush_time = flush
         self.__reference_time = 0
@@ -98,9 +99,11 @@ class Device:
         
     def startCollection(self):
         self.data_thread.start()
+        self.collecting=True
     
     def stop(self):
         self.end = True
+        self.collecting=False
         self.data_thread.join()
     
 
