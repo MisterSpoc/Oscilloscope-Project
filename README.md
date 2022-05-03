@@ -8,7 +8,7 @@ Oscilloscope project is designed to be an embedded demonstration of python, with
  
 # IMPORTANT DATA NOTE
 
-	In order for this program to work, data taken in by pyserial must be of the same format as the file in oscilloscope_output_example.txt . Verify your data is input in this same format, or none of this code will work!
+In order for this program to work, data taken in by pyserial must be of the same format as the file in oscilloscope_output_example.txt . Verify your data is input in this same format, or none of this code will work!
  
 # Necessary Libraries for functionality
 
