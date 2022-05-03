@@ -147,7 +147,7 @@ def gui():
                                         var += 1
                                         time.sleep(1)
                                     osc.stop()
-                                    plotData.plot(osc, name='{}.csv'.format(window['filename'].get())
+                                    plotData.plot(osc, name='{}.csv'.format(window['filename'].get()))
                                     MakeCSV.deleteTempFiles()
                                     window['Error'].update(value = 'Collection Complete!')
 
