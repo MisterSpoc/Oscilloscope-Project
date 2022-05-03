@@ -113,7 +113,7 @@ def gui():
                                         var += 1
                                         time.sleep(1)
                                     osc.stop()
-                                    MakeCSV.makeCSV(osc, '{}.csv'.format(window['filename'].get().strip(".csv")))
+                                    MakeCSV.makeCSV(osc, '{}.csv'.format(window['filename'].get()))
                                     MakeCSV.deleteTempFiles()
                                     window['Error'].update(value = 'Collection Complete!')
                                     
@@ -147,7 +147,7 @@ def gui():
                                         var += 1
                                         time.sleep(1)
                                     osc.stop()
-                                    plotData.plot(osc, name='{}.csv'.format(window['filename'].get().strip(".csv")))
+                                    plotData.plot(osc, name='{}.csv'.format(window['filename'].get())
                                     MakeCSV.deleteTempFiles()
                                     window['Error'].update(value = 'Collection Complete!')
 
@@ -165,7 +165,7 @@ def gui():
                                         var += 1
                                         time.sleep(1)
                                     osc.stop()
-                                    plotData.plot(osc, name='{}.csv'.format(window['filename'].get().strip(".csv")), fft = True)
+                                    plotData.plot(osc, name='{}.csv'.format(window['filename'].get()), Fft = True)
                                     MakeCSV.deleteTempFiles()
                                     #Delay(Time)
                                     window['Error'].update(value = 'Collection Complete!')
