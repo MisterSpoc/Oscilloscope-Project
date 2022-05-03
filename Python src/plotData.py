@@ -7,6 +7,8 @@ from scipy.fftpack import fft,fftfreq
 import numpy as np  
 
 def plot(osc, keepCSV=True, name=None, Fft=False):
+    # plots data using matplotlib, optional fft plot
+    # options to also save to CSV using MakeCSV module
     if(osc.buffer_flush_time == None):
         while(osc.collecting):
             None

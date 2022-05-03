@@ -5,10 +5,9 @@ import SerialFunctions
 import time
 import MakeCSV
 import plotData
-import threading
 
 def gui():
-    # matplotlib.use("Agg")
+    # variable init
     osc = None
     t = 0
 
@@ -49,6 +48,7 @@ def gui():
         font="Helvetica 18",
     )
 
+    # logic to handle button presses and data entry from GUI
     while True:
         while True:
             try:
@@ -183,9 +183,6 @@ def gui():
             except:
                 window['Error'].update(value = 'Unknown Error Occurred')            
                 
-                #Example currently, call plot fft when ready for implementation
-                
-            #Continue addition of elif, for more events
         if event in (sg.WINDOW_CLOSED, "Quit"):
             break
         if event == 'Exit':

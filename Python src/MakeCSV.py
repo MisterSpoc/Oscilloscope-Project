@@ -4,6 +4,9 @@ import pandas as pd
 def makeCSV(oscilloscope, name=None, save=True, item=None):
     # converts data in temp files to csv using pandas
     # follow conventions in output_example.txt for proper usage
+    # name denotes desired save file name
+    # if save set to False, will not save as a CSV, will instead return pandas dataframe used to make CSV
+    
     first = True
     headers = []
     data = []
