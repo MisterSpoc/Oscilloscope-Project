@@ -84,4 +84,17 @@ In order for this program to work, data taken in by pyserial must be of the same
   
   pip install pysimplegui
   
+# PyInstaller
+
+  Use: Create .exe file from a python file
+  
+  Relevant webpage:
+  
+  https://pyinstaller.org/en/stable/
+  
+  Install command:
+  
+  pip install pyinstaller
+  
+  Instructions: In powershell, cd into directory as main file. Run command: pyinstaller --onefile FILENAME. This will create a (massive) .exe file.
   
