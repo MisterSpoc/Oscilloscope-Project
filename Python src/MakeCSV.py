@@ -41,11 +41,11 @@ def makeCSV(oscilloscope, name=None, save=True, item=None):
                     if(first):
                         headers.append("Time({})".format(entry.split(", ")[1].split(":")[0]))
                         headers.append(entry.split(", ")[2].split(":")[0])
-                    for entry in range(len(t)):
-                        temp_list.append(t[entry].split(", ")[1].split(":")[1])
-                        temp_list.append(float(t[entry].split(", ")[2].split(":")[1].strip("\n")))
-                    first=False
-                    data.append(temp_list)
+                for entry in range(len(t)):
+                    temp_list.append(t[entry].split(", ")[1].split(":")[1])
+                    temp_list.append(float(t[entry].split(", ")[2].split(":")[1].strip("\n")))
+                first=False
+                data.append(temp_list)
                 
         
     data_to_save = pd.DataFrame(data, columns=headers)
