@@ -4,10 +4,7 @@ import os
 import pandas as pd
 import MakeCSV
 from scipy.fftpack import fft,fftfreq
-import numpy as np
-
-def live_plot():
-    None
+import numpy as np  
 
 def plot(osc, keepCSV=True, name=None, Fft=False):
     if(osc.buffer_flush_time == None):
@@ -64,9 +61,8 @@ def delay(i,osc):
 if __name__ == '__main__':
     import SerialFunctions
     MakeCSV.deleteTempFiles()
-    osc = SerialFunctions.Device('COM4')
+    osc = SerialFunctions.Device('COM4', flush=1)
     osc.startCollection()
-    time.sleep(10)
+    live_plot(osc)
     osc.stop()
-    plot(osc, Fft=True, keepCSV=False)
     MakeCSV.deleteTempFiles()

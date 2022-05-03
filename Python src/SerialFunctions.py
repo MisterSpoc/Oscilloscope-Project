@@ -21,7 +21,7 @@ class Device:
 
         Args:
             port (str, optional): port name. Defaults to ''
-            baud (int, optional): baud rate. Defaults to 57600.
+            baud (int, optional): baud rate. Defaults to 115200.
             time (int, optional): time till timeout. Defaults to 1.
             flush (float, optional): time between buffer flushes to file. If None, writes entire buffer
                 to file when port closes. Defaults to None
@@ -37,7 +37,6 @@ class Device:
         self.oscilloscope = serial.Serial()
         self.data_thread = threading.Thread(target=self.__openDataStream)
         self.lock = threading.Lock()
-        # self.oscilloscope.set_buffer_size(rx_size=1048576) # set buffer size to 1 MiB Windows Only
     
     def __openPort(self):
         """Opens a serial port with set variables
