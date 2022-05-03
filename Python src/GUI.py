@@ -10,6 +10,7 @@ matplotlib.use("Agg")
 fig = matplotlib.figure.Figure(figsize=(5, 4), dpi=100)
 t = np.arange(0, 3, .01)
 testlist = [1,2,3,4,5]
+newportlist = [6,7,9]
 
 def draw_figure(canvas, figure):
     figure_canvas_agg = FigureCanvasTkAgg(figure, canvas)
@@ -23,7 +24,7 @@ layout = [
                 enable_events=True,
                 size=(None, len(testlist)),
                 auto_size_text=True,
-                key = 'port'),
+                key = 'port'),[sg.Button('Port Refresh')]
      ],
     [sg.Radio('Collect','opt', key = 'Collect'), sg.Radio('Plot','opt', key = 'Plot'), sg.Radio('Collect and Plot','opt', key = 'Collect and Plot'), sg.Radio('FFT','opt', key = 'FFT')],
     [sg.Text("", key = 'Error')],
@@ -55,6 +56,9 @@ while True:
     
     if event in (sg.WINDOW_CLOSED, "Quit"):
         break
+    
+    if event == 'Port Refresh':
+        window['port'].update(newportlist)
 
     if event == 'Run':
         if window['port'].get():
@@ -64,6 +68,9 @@ while True:
             else:
                 window['Error'].update(value = ' ')
                 print('connect')
+                #Port Connection Code
+
+
 
                 if not window['time'].get():
                     window['Error'].update(value = 'Enter a Time Desired')
