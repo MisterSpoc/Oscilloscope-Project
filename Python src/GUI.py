@@ -1,8 +1,6 @@
 import PySimpleGUI as sg
 
-import numpy as np
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
-import matplotlib
 import SerialFunctions
 import time
 import MakeCSV
@@ -12,9 +10,6 @@ def gui():
     # matplotlib.use("Agg")
     osc = None
     t = 0
-
-    fig = matplotlib.figure.Figure(figsize=(5, 4), dpi=100)
-    t = np.arange(0, 3, .01)
 
     def draw_figure(canvas, figure):
         figure_canvas_agg = FigureCanvasTkAgg(figure, canvas)
@@ -164,6 +159,14 @@ def gui():
                                 else:
                                     print(window['filename'].get())
                                     window['Error'].update(value = 'Collecting Data...')
+                                    osc.startCollection()
+                                    var = 0
+                                    while(var<t):
+                                        var += 1
+                                        time.sleep(1)
+                                    osc.stop()
+                                    plotData.plot(osc, name='{}.csv'.format(window['filename'].get().strip(".csv")), fft = True)
+                                    MakeCSV.deleteTempFiles()
                                     #Delay(Time)
                                     window['Error'].update(value = 'Collection Complete!')
                                     #Display FFT Plot
@@ -174,12 +177,6 @@ def gui():
                     window['Error'].update(value = 'Select a port')
                     event == ''
                     
-
-                    #FFT and plotting code
-                    
-                
-            
-                #INS plot function call
                 
                 #Example currently, call plot fft when ready for implementation
                 
