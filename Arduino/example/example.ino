@@ -9,6 +9,15 @@ void loop() {
   Serial.print(millis());
   Serial.print(", V:");
   Serial.print(i,6);
+
+//  // duplicate
+//  Serial.print("; #current_reading, ms:");
+//  Serial.print(millis());
+//  Serial.print(", mA:");
+//  // plot sin wive with amplitude 120 and freq 10 hz
+//  Serial.print(120*sin(millis()*2.0*3.1416/100));
+
+  
   Serial.print("; #current_reading, ms:");
   Serial.print(millis());
   Serial.print(", mA:");
