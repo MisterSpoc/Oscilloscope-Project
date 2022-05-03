@@ -63,6 +63,5 @@ if __name__ == '__main__':
     MakeCSV.deleteTempFiles()
     osc = SerialFunctions.Device('COM4', flush=1)
     osc.startCollection()
-    live_plot(osc)
     osc.stop()
     MakeCSV.deleteTempFiles()
