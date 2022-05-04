@@ -55,7 +55,14 @@ def makeCSV(oscilloscope, name=None, save=True, item=None):
     if(save):
         if(name == None):
             name = "{}.csv".format(oscilloscope.data_thread.native_id)
-        data_to_save.to_csv(name)
+        try:
+            data_to_save.to_csv(name)
+            name = "{}.csv".format(oscilloscope.data_thread.native_id)
+            
+        except:
+            name = "{}.csv".format(oscilloscope.data_thread.native_id)
+            data_to_save.to_csv(name)
+            
     else:
         return data_to_save
 

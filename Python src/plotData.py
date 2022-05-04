@@ -15,16 +15,17 @@ def plot(osc, keepCSV=True, name=None, Fft=False):
         if(name == None):
             MakeCSV.makeCSV(osc,name="{}.csv".format(osc.data_thread.native_id))
         else:
-            MakeCSV.makeCSV(osc,name="{}.csv".format(name))
+            try:
+                MakeCSV.makeCSV(osc,name="{}.csv".format(name))
+            except:
+                MakeCSV.makeCSV(osc,name="{}.csv".format(osc.data_thread.native_id))
         for files in os.listdir():
-            if(name == None):
-                if(files=="{}.csv".format(osc.data_thread.native_id)):
-                    dataframe = pd.read_csv(files)
-                    break
-            else:
-                if(files=="{}.csv".format(name)):
-                    dataframe = pd.read_csv(files)
-                    break
+            if(files=="{}.csv".format(osc.data_thread.native_id)):
+                dataframe = pd.read_csv(files)
+                break
+            if(files=="{}.csv".format(name)):
+                dataframe = pd.read_csv(files)
+                break
         fig, axs = plt.subplots(1,int((len(dataframe.columns)-1)/2))
         if(Fft):
             figfft, axsfft = plt.subplots(1,int((len(dataframe.columns)-1)/2))
@@ -52,7 +53,10 @@ def plot(osc, keepCSV=True, name=None, Fft=False):
             
             
         if(not keepCSV):
-            os.remove("{}.csv".format(osc.data_thread.native_id))    
+            try:
+                os.remove("{}.csv".format(osc.data_thread.native_id))
+            except:
+                print("Error removing file")
         plt.show()
                 
 def delay(i,osc):

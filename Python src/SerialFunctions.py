@@ -68,9 +68,9 @@ class Device:
         buffer_flush_time seconds
         """
         self.__openPort()
-        time.sleep(3)
-        self.oscilloscope.reset_input_buffer()    
+        time.sleep(2)   
         self.__reference_time = time.time()
+        self.oscilloscope.reset_input_buffer()
         while(True):
             self.data_buffer.append(self.__getData().decode('utf-8').replace('\r',''))
             
