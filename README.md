@@ -34,7 +34,7 @@ To run the project: Connect the computer to the arduino, and hit port refresh un
 
 # Common Issues
 
-If you are getting an "Unknown Error" error message it is very likely that the data duration is not large enough. Increase the value and try again. If this does not work, please do a fresh upload of the .ino code included in our Arduino repository and try again.
+If you are getting an "Unknown Error" error message it is very likely that the data duration is not long enough. Increase the value and try again. If this issue persists, double check that the baud rate you enter in the application matches the one uploaded to the Arduino. Mismatched baud rates can cause data collection to fail.
 
 # Necessary Libraries for functionality
 
