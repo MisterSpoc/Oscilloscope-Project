@@ -9,6 +9,27 @@ Oscilloscope project is designed to be an embedded demonstration of python, with
 # IMPORTANT DATA NOTE
 
 In order for this program to work, data taken in by pyserial must be of the same format as the file in oscilloscope_output_example.txt . Verify your data is input in this same format, or none of this code will work!
+
+# Running the Project
+
+Options:
+
+Plot: Will plot the data in an amplitude vs time graph
+
+Collect: Will save data to a CSV file for future manipulation
+
+Collect and Plot: Will plot the data in an amplitude vs time graph, and Collect the data to a CSV file.
+
+FFT: This will collect the data to a CSV, and output a graph for the amplitude vs time, and the Frequency FFT graph.
+
+Time box: This is the duration of time, in seconds that you would like to collect data for. 
+
+Baud Rate: Should be matched to arduino baud rate for proper data reporting
+
+Filename: Name of CSV file that you would like to save the data to. 
+
+
+To run the project: Connect the arduino, select it from the listbox. Select a radio button for what you would like to do with collected data. Then, enter a collection time, a baud Rate (or leave blank, will default to 9600), and a filename. Next press the "RUN" button. This will complete the data collection process, and then output the desired graphs.
  
 # Necessary Libraries for functionality
 
