@@ -29,7 +29,7 @@ Baud Rate: Should be matched to arduino baud rate for proper data reporting
 Filename: Name of CSV file that you would like to save the data to. 
 
 
-To run the project: Connect the arduino, select it from the listbox. Select a radio button for what you would like to do with collected data. Then, enter a collection time, a baud Rate (or leave blank, will default to 9600), and a filename. Next press the "RUN" button. This will complete the data collection process, and then output the desired graphs.
+To run the project: Connect the computer to the arduino, and hit port refresh until you see your desired COM port show up. Select the arduino from the listbox, it will be highlighted in black. Select a radio button for what you would like to do with collected data. Then, enter a collection time, a baud Rate (or leave blank, will default to 9600), and a filename. Next press the "RUN" button. This will complete the data collection process, and then output the desired graphs.
  
 # Necessary Libraries for functionality
 
