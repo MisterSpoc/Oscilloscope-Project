@@ -6,9 +6,10 @@ Oscilloscope project is designed to be an embedded demonstration of python, with
 # Goals of project:
  Design an easy to use basic oscilloscope with data manipulation functions and graphing baked into basic functionality
  
-# IMPORTANT DATA NOTE
+# IMPORTANT DATA NOTES
 
-In order for this program to work, data taken in by pyserial must be of the same format as the file in oscilloscope_output_example.txt . Verify your data is input in this same format, or none of this code will work!
+In order for this program to work, data taken in by pyserial must be of the same format as the file in oscilloscope_output_example.txt . Verify your data is input in this same format, or certain parts of this application will fail!
+
 
 # Running the Project
 
@@ -24,17 +25,17 @@ FFT: This will collect the data to a CSV, and output a graph for the amplitude v
 
 Time box: This is the duration of time, in seconds that you would like to collect data for. 
 
-Baud Rate: Should be matched to arduino baud rate for proper data reporting
+Baud Rate: Should be matched to arduino baud rate for proper data collection
 
 Filename: Name of CSV file that you would like to save the data to. 
 
 
 To run the project: Connect the computer to the arduino, and hit port refresh until you see your desired COM port show up. Select the arduino from the listbox, it will be highlighted in black. Select a radio button for what you would like to do with collected data. Then, enter a collection time, a baud Rate (or leave blank, will default to 9600), and a filename. Next press the "RUN" button. This will complete the data collection process, and then output the desired graphs.
 
-# Common Issue
+# Common Issues
 
-If an issue is experienced and the GUI is showing the "unknown error" message, please do a fresh upload of the .ino code included in our Arduino repository.
- 
+If you are getting an "Unknown Error" error message it is very likely that the data duration is not large enough. Increase the value and try again. If this does not work, please do a fresh upload of the .ino code included in our Arduino repository and try again.
+
 # Necessary Libraries for functionality
 
 # Pyserial
