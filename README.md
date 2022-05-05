@@ -13,7 +13,7 @@ In order for this program to work, data taken in by pyserial must be of the same
 
 # Running the Project
 
-Ensure that Python is on version 3.9+
+# Ensure that Python is on version 3.9+
 
 Options:
 
